@@ -179,4 +179,4 @@ Tóm lại, quá trình truy cập một trang web bao gồm nhiều bước nh�
 
 Hiểu các bước này có thể giúp chẩn đoán và khắc phục sự cố liên quan đến quyền truy cập trang web.
 
-![App Screenshot](https://github.com/WP-Tien/Internet/web_request.png)
+![App Screenshot](https://github.com/WP-Tien/Internet/blob/master/web_request.png)
