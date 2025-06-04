@@ -6,26 +6,28 @@
 - Domain Name System (DNS)
 
 Vì vậy, mục tiêu của phần này là hiểu cách thức hoạt động của Internet, quá trình truy cập trang web và những gì xảy ra khi bạn nhập địa chỉ trang web và nhấn Enter.
-Internet là mạng lưới toàn cầu gồm các máy tính được kết nối với nhau, giao tiếp bằng các giao thức chuẩn hóa và các thành phần chính là máy khách và máy chủ.
-(So the internet is a global network of interconnected computers that communicate using standardized protocols, and the key components are clients and servers.)
+
+Internet là mạng lưới toàn cầu gồm các máy tính được kết nối với nhau, giao tiếp bằng các giao thức chuẩn hóa(standardized protocol) và các thành phần chính là máy khách và máy chủ.
 
 Các máy khách yêu cầu tài nguyên và máy chủ cung cấp tài nguyên.
-Vì vậy, máy khách có thể là trình duyệt hoặc ứng dụng, ứng dụng và điện thoại di động của chúng ta. Và máy chủ là máy chủ đang gửi dữ liệu mà chúng ta yêu cầu. Vì vậy, người dùng cuối là máy khách và chủ yếu là trình duyệt, còn máy chủ là công ty sở hữu ứng dụng sẽ cung cấp cho bạn dữ liệu mà bạn yêu cầu, bằng cách sử dụng trang web hoặc ứng dụng của họ. Hiện nay, có nhiều giao thức khác nhau liên quan trên internet và các giao thức này là các quy tắc xác định cách dữ liệu được truyền đi.
+
+Vì vậy, máy khách có thể là trình duyệt hoặc ứng dụng, ứng dụng và điện thoại di động của chúng ta. Và máy chủ là máy chủ đang gửi dữ liệu mà chúng ta yêu cầu. Vì vậy, người dùng cuối là máy khách và chủ yếu là trình duyệt, còn máy chủ là công ty sở hữu ứng dụng sẽ cung cấp cho bạn dữ liệu mà bạn yêu cầu, bằng cách sử dụng trang web hoặc ứng dụng của họ. 
+
+Hiện nay, có nhiều giao thức(protocal) khác nhau liên quan trên internet và các giao thức này là các quy tắc xác định cách dữ liệu được truyền đi.
 
 Ví dụ HTTP, https, TCP, IP và những thứ tương tự như vậy.
-Vì vậy, chúng ta cũng sẽ xem xét chúng.
-Và thành phần chính tiếp theo là địa chỉ IP.
-Đây là các mã định danh duy nhất cho các thiết bị trên internet.
 
-Và cuối cùng, chúng ta có Hệ thống tên miền DNS.
-DNS dịch tên miền mà con người có thể đọc được thành địa chỉ IP.
-Bây giờ, khi chúng ta mở một trang web trên trình duyệt của mình, hành trình của một yêu cầu web là gì?
+Và thành phần chính tiếp theo là địa chỉ IP. Đây là các mã định danh duy nhất(unique identifiers) cho các thiết bị trên internet.
+
+Và cuối cùng, chúng ta có Hệ thống tên miền DNS. DNS dịch tên miền mà con người có thể đọc được thành địa chỉ IP.
+
+## Bây giờ, khi chúng ta mở một trang web trên trình duyệt của mình, hành trình của một yêu cầu web là gì?
+
 Bước một là nhập URL.
 Vì vậy, khi bạn nhập một URL như google.com hoặc gmail.com, hoặc bất kỳ example.com, bất kỳ tên miền nào trong trình duyệt của bạn và bạn nhấn enter, trình duyệt sẽ bắt đầu quá trình tải trang web.
 Tiếp theo, ở bước hai, chúng ta có tra cứu DNS.
-Trình duyệt kiểm tra bộ nhớ đệm của mình để xem liệu nó đã biết địa chỉ IP cho tên miền hay chưa.
-Nếu chưa, nó sẽ truy vấn máy chủ DNS để lấy địa chỉ IP được liên kết với tên miền.
-Và tiếp theo, chúng ta có tương tác với máy chủ DNS liên quan đến cùng một bước.
+Trình duyệt kiểm tra bộ nhớ đệm của mình để xem liệu nó đã biết địa chỉ IP cho tên miền hay chưa. Nếu chưa, nó sẽ truy vấn máy chủ DNS để lấy địa chỉ IP được liên kết với tên miền. Và tiếp theo, chúng ta có tương tác với máy chủ DNS liên quan đến cùng một bước.
+
 Vì vậy, trình duyệt gửi truy vấn DNS đến trình phân giải DNS.
 Trình phân giải sẽ kiểm tra bộ nhớ đệm của mình nếu không tìm thấy địa chỉ IP.
 Nó sẽ truy vấn các máy chủ DNS khác theo cách phân cấp.
@@ -37,34 +39,42 @@ Vì vậy, google.com hoặc Gmail hoặc bất kỳ trang web nào.
 Com để nó truy vấn máy chủ DNS cấp cao nhất cho tên miền.
 Tiếp theo, máy chủ DNS có thẩm quyền phản hồi bằng địa chỉ IP cho tên miền, đó là w-w-w dot
 example.com.
+
 Và sau đó, chúng tôi thiết lập kết nối TCP.
 Vì vậy, bước thứ ba liên quan đến việc thiết lập kết nối TCP.
 Trình duyệt sử dụng địa chỉ IP để thiết lập kết nối với máy chủ web lưu trữ trang web.
 Điều này liên quan đến giao thức TCP IP.
 Trình duyệt gửi một gói tin được đồng bộ hóa TCP đến máy chủ.
 Máy chủ phản hồi lại bằng một gói tin đồng bộ hóa cũng như xác nhận, sau đó trình duyệt gửi một gói tin được xác nhận để hoàn tất quá trình bắt tay ba chiều.
-Đây là quá trình bắt tay TCP.
+
+### Đây là quá trình bắt tay TCP.
 Bước đầu tiên.
-Trình duyệt gửi một gói tin được đồng bộ hóa.
-Ở bước tiếp theo, máy chủ phản hồi không chỉ bằng gói tin được đồng bộ hóa mà còn bằng gói tin xác nhận.
-Và sau đó, trình duyệt gửi một gói tin xác nhận trở lại máy chủ như một xác nhận.
-Và đây là quá trình bắt tay ba chiều.
+- Trình duyệt gửi một gói tin được đồng bộ hóa.
+- Ở bước tiếp theo, máy chủ phản hồi không chỉ bằng gói tin được đồng bộ hóa mà còn bằng gói tin xác nhận.
+- Và sau đó, trình duyệt gửi một gói tin xác nhận trở lại máy chủ như một xác nhận. Và đây là quá trình bắt tay ba chiều.
+
 Và bây giờ ở bước bốn, chúng ta gửi một yêu cầu HTTP.
 Trình duyệt gửi một yêu cầu HTTP đến máy chủ, chỉ định tài nguyên mà nó muốn truy xuất.
 Shreve.
 Ví dụ: yêu cầu get cho index dot HTML và yêu cầu có loại HTTP 1.1.
 Nó tuân theo giao thức HTTP một.
+
 Ở bước năm, máy chủ xử lý yêu cầu và truy xuất tài nguyên được yêu cầu và gửi phản hồi HTTP trở lại trình duyệt.
 Phản hồi HTTP bao gồm mã trạng thái, ví dụ: mã trạng thái 200, có nghĩa là ổn, và một số tiêu đề như nén loại nội dung hoặc bất kỳ thông tin bổ sung nào và rất nhiều thông tin, rất quan trọng đối với yêu cầu và phản hồi.
 Và nó cũng có thể chứa cookie.
 Và cùng với tiêu đề và mã trạng thái, nó gửi tài nguyên được yêu cầu, ví dụ,
 Nội dung HTML hoặc chỉ dữ liệu JSON, bao gồm dữ liệu được lấy từ cơ sở dữ liệu, ở định dạng bảng và được chuyển đổi thành định dạng chuỗi, định dạng chuỗi JSON để dễ dàng truyền qua internet.
+
 Và cuối cùng, ở bước sáu, chúng ta sẽ hiển thị trang web hoặc chúng ta sẽ gửi dữ liệu được yêu cầu
 dưới dạng dữ liệu JSON.
+
+![App Screenshot](https://github.com/WP-Tien/Internet/blob/master/web_request.png)
+
 Vì vậy, trình duyệt nhận được phản hồi HTTP, phân tích cú pháp HTML và hiển thị trang web.
 Quá trình hiển thị liên quan đến mô hình đối tượng tài liệu, vì vậy trình duyệt xây dựng Dom từ các phần tử HTML mà nó nhận được từ máy chủ.
 Nó sẽ tìm nạp và xử lý các tài nguyên bổ sung, ví dụ như CSS, JavaScript và hình ảnh, sau đó trình duyệt sẽ hiển thị biểu diễn trực quan của trang web trên màn hình.
-Vì vậy, một điều mà bạn có thể thắc mắc là quy trình bắt tay TCP.
+
+### Vì vậy, một điều mà bạn có thể thắc mắc là quy trình bắt tay TCP.
 Vì vậy, trước tiên chúng ta hãy tìm hiểu TCP là gì.
 Bây giờ có các lớp mạng khác nhau liên quan khi chúng ta giao tiếp qua internet.
 Vì vậy, lớp ứng dụng là các giao thức HTTP, Https và DNS.
@@ -82,11 +92,15 @@ Và khi chúng ta có kết nối đáng tin cậy, chúng ta có thể gửi y�
 Vì vậy, kết nối là song công hoàn toàn.
 Và cả hai bên đồng bộ hóa và xác nhận lẫn nhau.
 Và chúng ta đã xem xét rằng trước tiên trình duyệt sẽ gửi một gói tin đã đồng bộ hóa.
-
 Và sau đó máy chủ phản hồi bằng cách đồng bộ hóa cũng như gói xác nhận, sau đó máy khách gửi một gói xác nhận đến.
-
 Hoàn tất bắt tay TCP.
-Cho đến nay, chúng ta đã hiểu cách chúng ta truy cập vào một trang web.
+
+
+
+
+![App Screenshot](https://github.com/WP-Tien/Internet/blob/master/url_uri.png)
+
+### Cho đến nay, chúng ta đã hiểu cách chúng ta truy cập vào một trang web.
 Điều gì xảy ra khi chúng ta gửi yêu cầu đến trang web?
 Khi chúng ta nhập tên miền vào thanh địa chỉ và nhấn enter.
 Nhưng bây giờ chúng ta hãy đến với URL, địa chỉ web mà chúng ta đang nhập vào thanh địa chỉ.
@@ -96,26 +110,29 @@ Về cơ bản, đây là các địa chỉ giúp chúng ta định vị các t�
 Vì vậy, mỗi tài nguyên sẽ có một URL duy nhất hoặc một URI duy nhất.
 Vì vậy, các thành phần của URL hoặc URI bao gồm giao thức.
 Vì vậy, ban đầu chúng ta có giao thức chỉ định cách trình duyệt sẽ truy xuất tài nguyên.
+
 Ví dụ: http, https và ftp.
 HTTP và Https là Giao thức truyền siêu văn bản và Https có an toàn không?
 Và chúng được sử dụng để truyền các trang web và nội dung khác giữa máy khách và máy chủ.
 FTP có nghĩa là giao thức truyền tệp và được sử dụng để truyền tệp giữa các máy tính.
 Và giao thức mà chúng ta đã thảo luận.
 HTTP https và FTP.
-Chúng cũng được gọi là lược đồ, vì vậy lược đồ và giao thức là một.
-Tiếp theo chúng ta có máy chủ.
+Chúng cũng được gọi là lược đồ(scheme), vì vậy lược đồ và giao thức(protocol) là một.
+
+### Tiếp theo chúng ta có máy chủ.
 Máy chủ cũng là tên miền hoặc địa chỉ IP.
 Tên miền phân giải thành địa chỉ IP và thực tế là máy chủ vì nó đang lưu trữ máy chủ
 sẽ gửi cho bạn thông tin sẽ gửi cho bạn phản hồi.
-Thành phần tiếp theo của URL là cổng.
-Bây giờ cổng là tùy chọn.
-Mặc định là 88 số không cho HTTP và 443 cho Https.
+Thành phần tiếp theo của URL là cổng(port).
+Bây giờ cổng(port) là tùy chọn.
+Mặc định là 88 zero số không cho HTTP và 443 cho Https.
 Vì vậy, bây giờ chúng ta có thể kết hợp nó để tạo thành HTTP.
 Và sau đó là dấu hai chấm hai dấu gạch chéo về phía trước.
 Và sau đó là w-w-w là World Wide Web dot Google, là máy chủ hoặc tên miền.com.
-Và như chúng tôi đã nói, cổng là tùy chọn.
-Vì vậy, chúng ta không cần cổng ở đây.
-Nhưng khi chúng ta tạo API của riêng mình, thì trong trường hợp đó, chúng ta sẽ yêu cầu cổng phải chính xác và có thể truy cập API, máy chủ của chúng ta trong quá trình phát triển.
+Và như chúng tôi đã nói, cổng(port) là tùy chọn.
+Vì vậy, chúng ta không cần cổng(port) ở đây.
+
+Nhưng khi chúng ta tạo API của riêng mình, thì trong trường hợp đó, chúng ta sẽ yêu cầu cổng(port) phải chính xác và có thể truy cập API, máy chủ của chúng ta trong quá trình phát triển.
 Khi chúng ta lưu trữ nó trên một địa chỉ IP, thì chúng ta sẽ không yêu cầu cổng.
 Nhưng trong quá trình phát triển, chúng ta cần cổng để truy cập API hoặc máy chủ của mình.
 Và bây giờ không phải tất cả vì đó là điều phổ biến nhất mà chúng ta làm.
@@ -123,6 +140,7 @@ Nhưng ngoài ra, còn có một số thứ khác cũng là thành phần của 
 Ngoài ra, còn có những thứ khác cũng là thành phần của URL.
 Vì vậy, tiếp theo chúng ta có đường dẫn.
 Đường dẫn là đường dẫn tài nguyên cụ thể, vị trí cụ thể của tài nguyên trên máy chủ.
+
 Ví dụ example.com slash images slash picture dot jpg.
 Vậy đó là vị trí cụ thể của tài nguyên trên máy chủ.
 Giống như chúng ta có đường dẫn cho một thư mục hoặc tệp trên hệ điều hành, chúng ta có đường dẫn cho một tài nguyên cụ thể trên máy chủ.
@@ -143,13 +161,15 @@ Vậy đây là URL hoàn chỉnh và tất cả các thành phần của URL.
 Bây giờ chúng ta đã hiểu thêm một chút về URL.
 Hãy đi sâu hơn một chút về URL và URI.
 Trước đó, tôi đã sử dụng URI và URL thay thế cho nhau, nhưng có một chút khác biệt.
-Vậy URI là Mã định danh tài nguyên thống nhất.
+
+### Vậy URI là Mã định danh tài nguyên thống nhất. (Uniform Resource identifier.)
 URI là chuỗi ký tự được sử dụng để xác định tài nguyên.
 Nó có thể được phân loại thành URL, là Định vị tài nguyên thống nhất, chỉ định vị trí của tài nguyên và cũng có thể được phân loại thành Urn Tên tài nguyên thống nhất, xác định tài nguyên theo tên trong không gian tên.
 Vậy thì URL là gì?
 Vậy URL là một loại URI cụ thể cung cấp phương tiện để định vị tài nguyên trên internet.
 Nó bao gồm đường dẫn miền giao thức và tùy chọn là chuỗi truy vấn và đoạn mã.
 Vậy đó là URL.
+
 Bây giờ bạn đã biết sự khác biệt giữa URL và URI.
 Và bạn cũng biết một thuật ngữ kỹ thuật khác là u r n.
 Vậy dữ liệu được truyền giữa máy chủ và máy khách như thế nào.
@@ -179,4 +199,3 @@ Tóm lại, quá trình truy cập một trang web bao gồm nhiều bước nh�
 
 Hiểu các bước này có thể giúp chẩn đoán và khắc phục sự cố liên quan đến quyền truy cập trang web.
 
-![App Screenshot](https://github.com/WP-Tien/Internet/blob/master/web_request.png)
