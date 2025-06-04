@@ -139,4 +139,6 @@ Trong bài giảng toàn diện này, chúng tôi đã trình bày quy trình c�
 
 Chúng tôi đã thảo luận về các khái niệm quan trọng, các vấn đề phổ biến và các phương pháp hay nhất để tối ưu hóa và bảo mật giao tiếp web.
 
-![App Screenshot](https://github.com/WP-Tien/Internet/blob/master/web_request.png)
+![App Screenshot](https://github.com/WP-Tien/Internet/blob/master/request_reponse_cycle/img1.png)
+
+![App Screenshot](https://github.com/WP-Tien/Internet/blob/master/request_reponse_cycle/img2.png)
