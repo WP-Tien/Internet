@@ -75,12 +75,13 @@ Quá trình hiển thị liên quan đến mô hình đối tượng tài liệu
 Nó sẽ tìm nạp và xử lý các tài nguyên bổ sung, ví dụ như CSS, JavaScript và hình ảnh, sau đó trình duyệt sẽ hiển thị biểu diễn trực quan của trang web trên màn hình.
 
 ### Vì vậy, một điều mà bạn có thể thắc mắc là quy trình bắt tay TCP.
-Vì vậy, trước tiên chúng ta hãy tìm hiểu TCP là gì.
+## Vì vậy, trước tiên chúng ta hãy tìm hiểu TCP là gì.
 Bây giờ có các lớp mạng khác nhau liên quan khi chúng ta giao tiếp qua internet.
 Vì vậy, lớp ứng dụng là các giao thức HTTP, Https và DNS.
 Chúng chịu trách nhiệm cho các API cấp cao, chia sẻ tài nguyên và truy cập tệp từ xa.
 Tiếp theo, chúng ta có lớp vận chuyển là TCP và UDP.
 Lớp này chịu trách nhiệm cho giao tiếp đầu cuối.
+
 Và tiếp theo, chúng ta có lớp internet.
 Giao thức là IP và chịu trách nhiệm giải quyết định tuyến và chuyển tiếp gói tin.
 Và cuối cùng, chúng ta có lớp liên kết.
